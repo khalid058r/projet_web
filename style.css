@@ -1,53 +1,60 @@
-
-*{
+* {
     padding: 0;
     margin: 0;
-    font-family: 'Poppins','sans-serif';
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-}
-
-body{
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
     width: 100%;
     height: 100vh;
     overflow: hidden;
     background-color: black;
-}
-nav{
+  }
+  
+  nav {
     width: 100%;
     height: 10vh;
     position: sticky;
-}
-.nav-container
-{
+  }
+  
+  .nav-container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
-.logo{
+  }
+  
+  .logo {
     color: white;
     font-size: 2rem;
     font-weight: bold;
-}
-.logo span{
+  }
+  
+  .logo span {
     color: #077b32;
-    text-shadow: 0 0 10 px #077b32;
-}
-.hamburger,.cancel
-{
+    text-shadow: 0 0 10px #077b32;
+  }
+  
+  .hamburger,
+  .cancel {
     cursor: pointer;
     position: absolute;
     right: 15px;
     top: 10px;
     color: white;
     display: none;
-    font-size: clamp(2.5rem,0.5rem + 5vw,3rem);
-}
-.nav-container .links{
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+  }
+  
+  .nav-container .links {
     display: flex;
-}
-.nav-container .links a{
+  }
+  
+  .nav-container .links a {
     position: relative;
     font-size: 1.2rem;
     color: white;
@@ -55,8 +62,9 @@ nav{
     text-decoration: none;
     font-weight: 500;
     transition: 0.3s linear;
-}
-.nav-container .links a::before{
+  }
+  
+  .nav-container .links a::before {
     position: absolute;
     content: "";
     bottom: -3px;
@@ -65,15 +73,18 @@ nav{
     height: 3px;
     background-color: #077b32;
     transition: 0.2s linear;
-}
-.nav-container .links a:hover::before{
+  }
+  
+  .nav-container .links a:hover::before {
     width: 100%;
-}
-.nav-container .links a:hover{
+  }
+  
+  .nav-container .links a:hover {
     color: #077b32;
-}
-.dropdown{
-    z-index: 100%;
+  }
+  
+  .dropdown {
+    z-index: 100;
     position: absolute;
     top: 0;
     transform: translateY(-500px);
@@ -82,8 +93,9 @@ nav{
     backdrop-filter: blur(4px) brightness(40%);
     box-shadow: 0 0 20px black;
     transition: 0.2s linear;
-}
-.dropdown .links a{
+  }
+  
+  .dropdown .links a {
     display: flex;
     color: white;
     text-decoration: none;
@@ -91,74 +103,85 @@ nav{
     padding: 15px 0;
     align-items: center;
     transition: 0.2s linear;
-}
-.dropdown .links a:hover{
+  }
+  
+  .dropdown .links a:hover {
     background-color: #077b32;
-}
-section{
+  }
+  
+  section {
     width: 100%;
     height: 90vh;
-}
-.main-container{
+    padding: 20px;
+  }
+  
+  .main-container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;    
-}
-.main-container .image{
+    align-items: center;
+  }
+  
+  .main-container .image {
     width: 500px;
     height: 80vh;
     border-radius: 100%;
     overflow: hidden;
-}
-.main-container .image img{
+  }
+  
+  .main-container .image img {
     width: 100%;
-}
-
-.main-container .image:hover{
+  }
+  
+  .main-container .image:hover {
     animation: animate 1.5s ease-in-out infinite;
-}
-
-
-@keyframes animate{
-    0%{
-        scale: 1;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: scale(1);
     }
-    50%{
-        scale: 1.05;
+    50% {
+      transform: scale(1.05);
     }
-    100%{
-        scale: 1;
+    100% {
+      transform: scale(1);
     }
-}
-.main-container .content{
+  }
+  
+  .main-container .content {
     color: white;
     width: 40%;
     min-height: 100px;
-}
-.content h1{
-    font-size: clamp(1rem,1rem + 5vw,1.8rem);
-}
-.content h1 span {
+  }
+  
+  .content h1 {
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+  }
+  
+  .content h1 span {
     color: #077b32;
-    text-shadow: 0 0 10px;
-}
-.content .typewriter{
-    font-size:clamp(1rem,1rem + 5vw);
+    text-shadow: 0 0 10px #077b32;
+  }
+  
+  .content .typewriter {
+    font-size: clamp(1rem, 1rem + 5vw);
     font-weight: 600;
-}
-.content .typewriter-text{
+  }
+  
+  .content .typewriter-text {
     color: #077b32;
     text-shadow: 0 0 10px #077b32;
     font-weight: 600;
-}
-.content p{
-    font-size: clamp(0.4rem,0.2rem + 9vw,1rem);
+  }
+  
+  .content p {
+    font-size: clamp(0.4rem, 0.2rem + 9vw, 1rem);
     margin: 10px 0;
-}
-
-.social-links i{
+  }
+  
+  .social-links i {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -170,15 +193,17 @@ section{
     color: #077b32;
     margin: 0 15px;
     font-size: 1.5rem;
-    transition: 0.2s linear; 
-}
-.social-links i:hover{
-    scale: 1.3;
+    transition: 0.2s linear;
+  }
+  
+  .social-links i:hover {
+    transform: scale(1.3);
     color: black;
     background-color: #077b32;
     filter: drop-shadow(0 0 10px #077b32);
-}
-.content button{
+  }
+  
+  .content button {
     width: 50%;
     height: 6vh;
     margin: 30px;
@@ -190,7 +215,197 @@ section{
     font-weight: 700;
     border-radius: 5px;
     transition: 0.2s linear;
+  }
+  
+  .content button:hover {
+    transform: scale(1.1);
+    color: #077b32;
+    border: 2px solid #077b32;
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px #077b32;
+  }
+  
+  form {
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  form .form-group input,
+  form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #077b32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s linear;
+  }
+  
+  form button[type="submit"]:hover {
+    transform: scale(1.05);
+    background-color: transparent;
+    border: 2px solid #077b32;
+  }
+  
+  @media (max-width: 884px) {
+    nav .logo {
+      position: absolute;
+      top: 16px;
+      left: 15px;
+      font-size: 1.5rem;
+    }
+    .nav-container .links {
+      display: none; /* Cache le menu normal */
+    }
+    .main-container {
+      display: flex;
+      flex-direction: column;
+    }
+    .hamburger,
+    .cancel {
+      display: block;
+    }
+    .main-container .content {
+      width: 80%;
+    }
+    .social-links i {
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.5rem;
+    }
+    .main-container .image {
+      z-index: -1;
+      width: 50%;
+      height: 60%;
+    }
+  }
+  
+  @media (max-width: 440px) {
+    .main-container .image {
+      width: 50%;
+      height: 40%;
+    }
+    .main-container .content {
+      width: 80%;
+    }
+    .main-container button {
+      margin-top: 15px;
+    }
+  }
+  /* SKILLS SECTION */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+.skill {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+.skill i {
+    font-size: 3rem;
+    color: #077b32;
+  }
+  
+.skill p {
+    margin-top: 10px;
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+.skill:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ABOUT SECTION */
+.about-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+.about-text {
+    color: white;
+    font-size: 1.2rem;
+    width: 50%;
+  }
+  
+.about-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #077b32;
+  }
+  
+  /* CONTACT FORM */
+form {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+form .form-group {
+    margin-bottom: 15px;
+  }
+  
+form .form-group input,
+form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #077b32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s linear;
+  }
+  
+form button[type="submit"]:hover {
+    transform: scale(1.05);
+    background-color: transparent;
+    border: 2px solid #077b32;
 }
-
-
-
+body {
+    overflow: hidden;
+  }
