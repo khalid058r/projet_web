@@ -406,14 +406,8 @@ form button[type="submit"]:hover {
     background-color: transparent;
     border: 2px solid #077b32;
 }
-body {
-    overflow: hidden;
-  }
 
-  body {
-    overflow: hidden;
-  }
-  body {
-    overflow: auto;
-  }
+body {
+  overflow: auto;
+}
     
