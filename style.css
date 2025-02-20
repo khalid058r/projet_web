@@ -409,3 +409,11 @@ form button[type="submit"]:hover {
 body {
     overflow: hidden;
   }
+
+  body {
+    overflow: hidden;
+  }
+  body {
+    overflow: auto;
+  }
+    
