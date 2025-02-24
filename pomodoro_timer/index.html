@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Pomodoro Timer</h1>
+        <div class="user-stats">
+            <div class="level-badge">Level 1</div>
+            <div class="xp-container">
+                <div class="xp-bar">
+                    <div class="xp-progress" style="width: 0%"></div>
+                </div>
+                <div class="xp-text">0/100 XP</div>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <aside class="card">
+            <h2>Settings</h2>
+            <div class="settings-group">
+                <label class="settings-label">Work Duration (minutes)</label>
+                <input type="number" id="workDuration" class="settings-input" value="25" min="1" max="60">
+            </div>
+            <div class="settings-group">
+                <label class="settings-label">break Duration (minutes)</label>
+                <input type="number" id="breakDuration" class="settings-input" value="5" min="1" max="30">
+            </div>
+            <div class="settings-group">
+                <label class="settings-label">Long break Duration (minutes)</label>
+                <input type="number" id="longbreakDuration" class="settings-input" value="15" min="1" max="60">
+            </div>
+
+            <h3 style="margin: 2rem 0 1rem">Achievements</h3>
+            <div class="achievements">
+                <div class="achievement" data-achievement="first-pomodoro">
+                    <div class="achievement-icon">🌟</div>
+                    <div>First Pomodoro</div>
+                </div>
+                </div>
+                <div class="achievement" data-achievement="productive-day">
+                    <div class="achievement-icon">⭐</div>
+                    <div>Productive Day</div>
+                </div>
+            </div>
+        </aside>
+        <section class="card timer">
+            <div class="timer-mode">Work Time</div>
+            <svg class="progress-ring" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#eee" stroke-width="5"/>
+                <circle class="progress-ring__circle" cx="50" cy="50" r="45" fill="none" stroke="var(--primary)" stroke-width="5"/>
+            </svg>
+            <div class="timer-display">25:00</div>
+            <div class="buttons">
+                <button id="startBtn" class="btn btn-primary">Start</button>
+                <button id="resetBtn" class="btn btn-secondary">Reset</button>
+            </div>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-value" id="todayPomodoros">0</div>
+                    <div class="stat-label">Today's Pomodoros</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" id="totalFocusTime">0h</div>
+                    <div class="stat-label">Total Focus Time</div>
+                </div>
+            </div>
+        </section>
+        <aside class="card">
+            <h2>Tasks</h2>
+            <input type="text" class="task-input" placeholder="Add a new task and press Enter...">
+            <div class="task-list"></div>
+        </aside>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
