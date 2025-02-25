@@ -1,0 +1,250 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+    font-family: 'Rajdhani', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(ellipse at bottom, #0f0f0f 0%, #000000 100%);
+    position: relative;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    perspective: 1000px;
+}
+
+h2 {
+    text-align: center;
+    color: #077b32;
+    margin-bottom: 20px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(7, 123, 50, 0.7), 0 0 20px rgba(7, 123, 50, 0.5);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(7, 123, 50, 0.7), 0 0 20px rgba(7, 123, 50, 0.5);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(7, 123, 50, 0.9), 0 0 30px rgba(7, 123, 50, 0.7), 0 0 40px rgba(7, 123, 50, 0.5);
+    }
+}
+
+form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(7, 123, 50, 0.3);
+    box-shadow: 0 0 30px rgba(7, 123, 50, 0.3);
+    transform-style: preserve-3d;
+    animation: formFloat 6s infinite ease-in-out;
+}
+
+
+.form-header {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(7, 123, 50, 0.5);
+}
+
+.form-header::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 30%;
+    height: 3px;
+    background: #077b32;
+    animation: headerLine 3s infinite alternate;
+}
+
+@keyframes headerLine {
+    from { width: 30%; }
+    to { width: 100%; }
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+.form-group label {
+    display: block;
+    color: rgb(240, 243, 246);
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    transform: translateX(0);
+    transition: 0.3s;
+    opacity: 0.7;
+    letter-spacing: 1px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-bottom: 2px solid rgba(7, 123, 50, 0.5);
+    border-radius: 5px 5px 0 0;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group input:focus {
+    outline: none;
+    background: rgba(7, 123, 50, 0.1);
+    border-bottom: 2px solid #077b32;
+    box-shadow: 0 5px 15px rgba(7, 123, 50, 0.2);
+}
+
+.form-group::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #077b32;
+    transition: 0.3s;
+}
+
+.form-group:hover::after {
+    width: 100%;
+}
+
+.form-group:hover label {
+    transform: translateX(10px);
+    color: #077b32;
+    opacity: 1;
+}
+
+/* Cyberpunk inspired button */
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #000;
+    color: #077b32;
+    border: 2px solid #077b32;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, #077b32, transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #077b32, transparent, #077b32);
+    z-index: -2;
+    animation: borderRotate 3s linear infinite;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+@keyframes borderRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+button:hover {
+    color: black;
+    background: #077b32;
+    box-shadow: 0 0 20px rgba(7, 123, 50, 0.8);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+button:hover::after {
+    opacity: 1;
+}
+
+/* Loading dots on button */
+.submit-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dots {
+    display: none;
+}
+
+button:active .dots {
+    display: flex;
+}
+
+button:active .text {
+    display: none;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    margin: 0 3px;
+    animation: dot-pulse 1s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes dot-pulse {
+    0%, 100% { transform: scale(0.8); opacity: 0.5; }
+    50% { transform: scale(1.2); opacity: 1; }
+}

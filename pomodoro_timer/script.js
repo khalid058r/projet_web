@@ -287,3 +287,24 @@ document.head.appendChild(style);
 
 // Initialiser le timer au chargement
 window.addEventListener('load', initTimer);
+const toggleModeBtn = document.createElement('button');
+toggleModeBtn.className = 'toggle-mode';
+toggleModeBtn.textContent = 'Switch Mode';
+document.querySelector('.header').appendChild(toggleModeBtn);
+
+// Load user preference from localStorage
+if (localStorage.getItem('dark-mode') === 'enabled') {
+    document.body.classList.add('dark-mode');
+}
+
+// Toggle dark mode on button click
+toggleModeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    // Save preference in localStorage
+    if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('dark-mode', 'enabled');
+    } else {
+        localStorage.setItem('dark-mode', 'disabled');
+    }
+});
