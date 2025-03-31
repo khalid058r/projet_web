@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book price="29.99">
+    <title>Java Programming</title>
+    <author>author1</author>
+    </book> 
+    <book price="20.99">
+    <title>cpp Programming</title>
+    <author>author2</author>
+    </book> 
+    <book price="30.00">
+    <title>python Programming</title>
+    <author>author3</author>
+    </book> 
+</books>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<people>
+    <person gendre = "male">
+        <LastName>testname</LastName>
+        <FirstName>testname</FirstName>
+        <adress>test aderss</adress>
+        <telephone>+212 6060606</telephone>
+        <emails>
+            <email type ="work"> mailWork@gmail.com </email>
+            <email type = "personnel">personnelmail@gmail.com </email>
+        </emails>
+    </person>
+    <person gendre ="female">
+        <LastName>testname</LastName>
+        <FirstName>testname</FirstName>
+        <adress>test aderss</adress>
+        <telephone>+212 6060606</telephone>
+        <emails>
+            <email type ="work">persone2work@gmail.com </email>
+            <email type = "personnel">person2personnel@gmail.com </email>
+        </emails>
+    </person>
+    <person gendre ="male">
+        <LastName>newname</LastName>
+        <FirstName>newname</FirstName>
+        <adress>new address</adress>
+        <telephone>+212 7070707</telephone>
+        <emails>
+            <email type ="work">newwork@gmail.com</email>
+            <email type = "personnel">newpersonnel@gmail.com</email>
+        </emails>
+    </person>
+</people>
