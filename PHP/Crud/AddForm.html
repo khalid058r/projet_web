@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un étudiant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="Adduser.php" method="POST">
+        <div>
+            <label for="CNE">CNE :</label>
+            <input type="text" id="CNE" name="cne" required>
+        </div>
+        <div>
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+        </div>
+        <div>
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+        </div>
+        <div>
+            <label for="date_nes">Date de naissance :</label>
+            <input type="date" id="date_nes" name="date_nes" required>
+        </div>
+        <div>
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="filiere">Filière :</label>
+            <input type="text" id="filiere" name="filiere" required>
+        </div>
+        <div>
+            <button type="submit">Ajouter l'étudiant</button>
+        </div>
+    </form>
+</body>
+</html>
