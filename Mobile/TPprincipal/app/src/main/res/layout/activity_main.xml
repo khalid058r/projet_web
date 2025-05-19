@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Section 1: Logo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:background="#BBDEFB">
+
+            <ImageView
+                android:layout_width="453dp"
+                android:layout_height="342dp"
+                android:contentDescription="Logo"
+                android:src="@drawable/profilbkg" />
+        </LinearLayout>
+
+        <!-- Section 2: Nom et Titre -->
+
+        <!-- Section 3: Contact -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#BBDEFB"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView android:layout_width="250dp" android:layout_height="wrap_content"
+                android:text="Khalid Abouelfaraj"
+                android:textColor="#2E7D32"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingTop="4dp"
+                android:text="CS and Data Engineer"
+                android:textColor="#4CAF50"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="#BBDEFB">
+
+            <!-- Téléphone -->
+            <TextView android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" +212 6 03 40 28 91"
+                android:autoLink="phone"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:paddingBottom="8dp" />
+
+            <!-- LinkedIn -->
+            <TextView android:id="@+id/linkedin" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#0A66C2"
+                android:textSize="16sp"
+                android:paddingBottom="4dp" />
+
+            <!-- Instagram -->
+            <TextView
+                android:id="@+id/instagram" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="#C13584"
+                android:textSize="16sp"
+                android:paddingBottom="4dp" />
+
+            <!-- Email -->
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#D44638"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
